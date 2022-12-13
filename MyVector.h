@@ -1,15 +1,6 @@
 ﻿#pragma once
 
-#include <iostream>
 #include <functional>
-
-template <typename T>
-class Node final
-{
-public:
-    T data{};
-    T* prt = nullptr;
-};
 
 template <typename T>
 class MyVector final
