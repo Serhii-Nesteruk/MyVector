@@ -61,20 +61,19 @@ void MyVector<T>::erase(const std::size_t startIndex, const std::size_t lastInde
 }
 
 template <typename T>
-void MyVector<T>::erase_if(std::function<bool(std::size_t)> func)//*
+void MyVector<T>::erase_if(std::function<bool(T)> func)//*
 {
-    for (std::size_t i = 0; i < size_; ++i)
-        if (func(i))
-            shiftToLeft();
+    for (std::size_t i = 0; i < size_; )
+        if (func(vec[i]))
+            shiftToLeft(i);
+        else
+            ++i;
 }
 
 template <typename T>
 bool MyVector<T>::empty()
 {
-    if (size_ <= 0)
-        return true;
-    else 
-        return false;
+    return size_ <= 0;
 }
 
 template <typename T>

@@ -22,7 +22,7 @@ public:
     void insert(const T& newElement, const std::size_t index);
     void erase(const std::size_t index);
     void erase(const std::size_t startIndex, const std::size_t lastIndex);
-    void erase_if(std::function<bool(std::size_t)> func);
+    void erase_if(std::function<bool(T)> func);
     void shrink_to_fit();
     void shiftToRight(const std::size_t indexFrom = 0);
     void shiftToLeft(const std::size_t indexFrom = 0);
