@@ -1,9 +1,12 @@
 ﻿#pragma once
 
 #include <functional>
+#include <mutex>
 
 template <typename T>
 class MyVector final {
+private:
+  std::recursive_mutex mut;
 public:
   MyVector();
   MyVector &operator=(const MyVector &) = default;
@@ -24,19 +27,19 @@ public:
   void push_front(T data);
   /*!
    * @brief Deleting the last element of the vector.
-   * @param nothing
+   * @param void
    * @return void nothing
    */
   void pop_back();
   /*!
    * @brief Deleting the first element of the vector.
-   * @param nothing
+   * @param void
    * @return void nothing
    */
   void pop_front();
   /*!
    * @brief Clearing the vector.
-   * @param nothing
+   * @param void
    * @return void nothing
    */
   void clear();
@@ -54,7 +57,7 @@ public:
   void reserve(const std::size_t newCapacity);
   /*!
   * @brief returns true or false depending on whether the vector contains elements or is empty
-  * @param nothing
+  * @param void
   * @return void nothing
   */
   bool empty();
@@ -84,7 +87,7 @@ public:
   void erase_if(std::function<bool(T)> func);
   /*!
   * @brief Deleting all the elements that are not used.
-  * @param nothing
+  * @param void
   * @return void nothing
   */
   void shrink_to_fit();
@@ -109,33 +112,33 @@ public:
   /*!
    * @brief Deleting the element at the given index
    * @param const std::size_t index
-   * @throw std::exception
    * @return T&
    */
   T &at(const std::size_t index) const;
   /*!
    * @brief It returns the first element of the vector.
-   * @param nothing
-   * @throw std::exception
+   * @param void
+   * @throw std::out_of_range
    * @return T&
    */
   T &front();
   /*!
   * @brief It returns the last element of the vector.
-  * @param nothing
-  * @throw std::exception
+  * @param void
+  * @throw std::out_of_range
   * @return T&
   */
   T &back();
   /*!
   * @brief It returns the capacity of the vector.
-  * @param nothing
+  * @param void
+  * @throw std::out_of_range
   * @return std::size_t
   */
   std::size_t capacity();
   /*!
    * @brief It returns the size of the vector.
-   * @param nothing
+   * @param void
    * @return std::size_t
    */
 
@@ -143,7 +146,7 @@ public:
 private:
   /*!
     * @brief It checks if the size of the vector is equal to the capacity of the vector.If it is not, it increases the capacity of the vector.
-    * @param nothing
+    * @param void
     * @return nothing
     */
 

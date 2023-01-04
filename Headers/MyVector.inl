@@ -1,4 +1,5 @@
-﻿#include "MyVector.h"
+﻿#include "../Headers/MyVector.h"
+#include <stdexcept>
 
 template <typename T>
 MyVector<T>::MyVector() {
@@ -11,34 +12,46 @@ MyVector<T>::~MyVector() {
 
 template <typename T>
 void MyVector<T>::resize(const std::size_t newSize) {
+  mut.lock();
+  
   if (newSize > capacity_)
     reserve(newSize);
-
   size_ = newSize;
+  
+
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::shrink_to_fit() {
+  mut.lock();
+  
   capacity_ = size_;
   T *temp = new T[capacity_]{};
   memcpy(temp, vec, size_ * sizeof(T));
 
   delete[] vec;
   vec = temp;
+
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::shiftToRight(const std::size_t indexFrom) {
-  for (std::size_t i = size_; i >= indexFrom; --i)
+  mut.lock();
+  for (std::size_t i = size_; i >= indexFrom; --i) 
     vec[i] = vec[i - 1];
   ++size_;
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::shiftToLeft(const std::size_t indexFrom) {
+  mut.lock();
   for (std::size_t i = indexFrom; i < size_; ++i)
     vec[i] = vec[i + 1];
   --size_;
+  mut.unlock();
 }
 
 template <typename T>
@@ -48,18 +61,22 @@ void MyVector<T>::erase(const std::size_t index) {
 
 template <typename T>
 void MyVector<T>::erase(const std::size_t startIndex, const std::size_t lastIndex) {
+  mut.lock();
   for (std::size_t i = startIndex; i <= lastIndex; ++i)
     shiftToLeft(startIndex);
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::erase_if(std::function<bool(T)> func) //*
 {
+  mut.lock();
   for (std::size_t i = 0; i < size_;)
     if (func(vec[i]))
       shiftToLeft(i);
     else
       ++i;
+  mut.unlock();
 }
 
 template <typename T>
@@ -69,8 +86,9 @@ bool MyVector<T>::empty() {
 
 template <typename T>
 void MyVector<T>::push_front(T data) {
+  mut.lock();
+  
   checkForRightSize();
-
   ++size_;
   T temp1 = vec[0], temp2;
   vec[0] = data;
@@ -80,20 +98,25 @@ void MyVector<T>::push_front(T data) {
     if (i < size_ - 1)
       temp1 = temp2;
   }
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::insert(const T &newElement, const std::size_t index) {
+  mut.lock();
   checkForRightSize();
 
   shiftToRight(index);
   vec[index] = newElement;
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::pop_back() {
+  mut.lock();
   if (size_ - 1 >= 0)
     --size_;
+  mut.unlock();
 }
 
 template <typename T>
@@ -104,11 +127,12 @@ void MyVector<T>::clear() {
 
 template <typename T>
 void MyVector<T>::pop_front() {
+  mut.lock();
   T temp = vec[2];
   for (std::size_t i = 0; i < size_; ++i) {
-    if (i > 0)
+    if (i > 0) 
       temp = vec[i];
-
+    
     if (i < size_ - 1) {
       vec[i] = vec[i + 1];
       vec[i + 1] = temp;
@@ -116,10 +140,13 @@ void MyVector<T>::pop_front() {
   }
 
   --size_;
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::reserve(const std::size_t newCapacity) {
+  mut.lock();
+
   const auto oldCapacity = capacity_;
   capacity_ = newCapacity * 2ull;
   T *temp = new T[capacity_]{};
@@ -127,14 +154,18 @@ void MyVector<T>::reserve(const std::size_t newCapacity) {
 
   delete[] vec;
   vec = temp;
+
+  mut.unlock();
 }
 
 template <typename T>
 void MyVector<T>::push_back(T data) {
+  mut.lock();
   checkForRightSize();
-
+  
   ++size_;
   vec[size_ - 1] = data;
+  mut.unlock();
 }
 
 template <typename T>
@@ -147,7 +178,7 @@ T &MyVector<T>::at(const std::size_t index) const {
   if (index < size_)
     return vec[index];
   else
-    throw std::exception("MyVector::going beyond the vecay");
+    throw std::out_of_range("MyVector::going beyond the vecay");
 }
 
 template <typename T>
