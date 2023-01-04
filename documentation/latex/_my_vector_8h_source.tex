@@ -1,0 +1,48 @@
+\hypertarget{_my_vector_8h_source}{}\doxysection{My\+Vector.\+h}
+\label{_my_vector_8h_source}\index{Headers/MyVector.h@{Headers/MyVector.h}}
+\mbox{\hyperlink{_my_vector_8h}{Go to the documentation of this file.}}
+\begin{DoxyCode}{0}
+\DoxyCodeLine{1 \textcolor{preprocessor}{\#pragma once}}
+\DoxyCodeLine{2 }
+\DoxyCodeLine{3 \textcolor{preprocessor}{\#include <functional>}}
+\DoxyCodeLine{4 }
+\DoxyCodeLine{5 \textcolor{keyword}{template} <\textcolor{keyword}{typename} T>}
+\DoxyCodeLine{6 \textcolor{keyword}{class }\mbox{\hyperlink{class_my_vector}{MyVector}} final \{}
+\DoxyCodeLine{7 \textcolor{keyword}{public}:}
+\DoxyCodeLine{8   \mbox{\hyperlink{class_my_vector_ac356762c5ced52c0d934476cef32e472}{MyVector}}();}
+\DoxyCodeLine{9   \mbox{\hyperlink{class_my_vector}{MyVector}} \&\mbox{\hyperlink{class_my_vector_a11164c4a08fb63ca9c685b7a3e0de854}{operator=}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_my_vector}{MyVector}} \&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{10   \mbox{\hyperlink{class_my_vector_af3f732fef53e278f6410e9866def3399}{MyVector}}(\textcolor{keyword}{const} \mbox{\hyperlink{class_my_vector}{MyVector}} \&) = \textcolor{keywordflow}{default};}
+\DoxyCodeLine{11   \mbox{\hyperlink{class_my_vector_abe59f181259ff63fa583f4bd87a9737e}{\string~MyVector}}();}
+\DoxyCodeLine{12 }
+\DoxyCodeLine{18   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a9c546616e63f466f3a45515ae14f9890}{push\_back}}(T data);}
+\DoxyCodeLine{24   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a5580c20f59ed81410109503e0ae35fa7}{push\_front}}(T data);}
+\DoxyCodeLine{30   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_aa896e95bb435535bdcc0b3e7bcb7f6fe}{pop\_back}}();}
+\DoxyCodeLine{36   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a217dbb95f74b71e577de18b190a79927}{pop\_front}}();}
+\DoxyCodeLine{42   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_adabde890d749f012b0c4dd1531f2fe80}{clear}}();}
+\DoxyCodeLine{48   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_ae8f11b422a8359ca3a25039cd4bb856d}{resize}}(\textcolor{keyword}{const} std::size\_t newSize);}
+\DoxyCodeLine{54   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_acd271ec2c45d793c510ab01b296a810d}{reserve}}(\textcolor{keyword}{const} std::size\_t newCapacity);}
+\DoxyCodeLine{60   \textcolor{keywordtype}{bool} \mbox{\hyperlink{class_my_vector_a7c1edd47d0780a3c49130ef4ed10ff91}{empty}}();}
+\DoxyCodeLine{66   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_aaf438b4492f1dd47a47d077d073897cb}{insert}}(\textcolor{keyword}{const} T \&newElement, \textcolor{keyword}{const} std::size\_t index);}
+\DoxyCodeLine{72   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_ab90bd3bc6f0daee830adc7892f6ad546}{erase}}(\textcolor{keyword}{const} std::size\_t index);}
+\DoxyCodeLine{78   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_ab90bd3bc6f0daee830adc7892f6ad546}{erase}}(\textcolor{keyword}{const} std::size\_t startIndex, \textcolor{keyword}{const} std::size\_t lastIndex);}
+\DoxyCodeLine{84   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_ac9a5abb80e053dba9c900eab2463e252}{erase\_if}}(std::function<\textcolor{keywordtype}{bool}(T)> func);}
+\DoxyCodeLine{90   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a1a9ceb53cb836b3b3d8e1b06b102164d}{shrink\_to\_fit}}();}
+\DoxyCodeLine{96   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a8fac2dd59ec90a754463d7515a0ae933}{shiftToRight}}(\textcolor{keyword}{const} std::size\_t indexFrom = 0);}
+\DoxyCodeLine{102   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a6c8d770064c0be955b8d01c8de6089a6}{shiftToLeft}}(\textcolor{keyword}{const} std::size\_t indexFrom = 0);}
+\DoxyCodeLine{108   T \&\mbox{\hyperlink{class_my_vector_a621daad478907dd4512292baadd1ccd5}{operator[]}}(\textcolor{keyword}{const} std::size\_t index) \textcolor{keyword}{const};}
+\DoxyCodeLine{114   T \&\mbox{\hyperlink{class_my_vector_a1f388697df982266af3c059a32b19e23}{at}}(\textcolor{keyword}{const} std::size\_t index) \textcolor{keyword}{const};}
+\DoxyCodeLine{121   T \&\mbox{\hyperlink{class_my_vector_afa2a87cfac1fb808408804c090b17376}{front}}();}
+\DoxyCodeLine{128   T \&\mbox{\hyperlink{class_my_vector_a7bb0bf3154979254ea86285181675e7a}{back}}();}
+\DoxyCodeLine{135   std::size\_t \mbox{\hyperlink{class_my_vector_ad8b61602c2212dd30ff0eea22e0d953a}{capacity}}();}
+\DoxyCodeLine{142   std::size\_t \mbox{\hyperlink{class_my_vector_a20d95db0a1779fb6b252af36fb484877}{size}}();}
+\DoxyCodeLine{143 \textcolor{keyword}{private}:}
+\DoxyCodeLine{150   \textcolor{keywordtype}{void} \mbox{\hyperlink{class_my_vector_a25db82c92a96086cce5c70951c124820}{checkForRightSize}}();}
+\DoxyCodeLine{151 \textcolor{keyword}{private}:}
+\DoxyCodeLine{152   std::size\_t \mbox{\hyperlink{class_my_vector_a726428cda60650448e4160296d2e4a40}{size\_}} = \{\};}
+\DoxyCodeLine{153   std::size\_t \mbox{\hyperlink{class_my_vector_af5b2f747c7eca1addefd3928de5185a6}{capacity\_}} = \{\};}
+\DoxyCodeLine{154   T *\mbox{\hyperlink{class_my_vector_ae4e22db42fd35e3187f508087fa68d07}{vec}} = \textcolor{keyword}{nullptr};}
+\DoxyCodeLine{155 \};}
+\DoxyCodeLine{156 }
+\DoxyCodeLine{157 \textcolor{preprocessor}{\#include "{}\mbox{\hyperlink{_my_vector_8inl}{MyVector.inl}}"{}}}
+
+\end{DoxyCode}

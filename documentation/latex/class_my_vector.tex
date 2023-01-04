@@ -1,0 +1,570 @@
+\hypertarget{class_my_vector}{}\doxysection{My\+Vector\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Class Template Reference}
+\label{class_my_vector}\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+
+
+{\ttfamily \#include $<$My\+Vector.\+h$>$}
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_my_vector_ac356762c5ced52c0d934476cef32e472}{My\+Vector}} ()
+\item 
+\mbox{\hyperlink{class_my_vector}{My\+Vector}} \& \mbox{\hyperlink{class_my_vector_a11164c4a08fb63ca9c685b7a3e0de854}{operator=}} (const \mbox{\hyperlink{class_my_vector}{My\+Vector}} \&)=default
+\item 
+\mbox{\hyperlink{class_my_vector_af3f732fef53e278f6410e9866def3399}{My\+Vector}} (const \mbox{\hyperlink{class_my_vector}{My\+Vector}} \&)=default
+\item 
+\mbox{\hyperlink{class_my_vector_abe59f181259ff63fa583f4bd87a9737e}{$\sim$\+My\+Vector}} ()
+\item 
+void \mbox{\hyperlink{class_my_vector_a9c546616e63f466f3a45515ae14f9890}{push\+\_\+back}} (T data)
+\begin{DoxyCompactList}\small\item\em Adding an element to the ending of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a5580c20f59ed81410109503e0ae35fa7}{push\+\_\+front}} (T data)
+\begin{DoxyCompactList}\small\item\em Adding an element to the beginning of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_aa896e95bb435535bdcc0b3e7bcb7f6fe}{pop\+\_\+back}} ()
+\begin{DoxyCompactList}\small\item\em Deleting the last element of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a217dbb95f74b71e577de18b190a79927}{pop\+\_\+front}} ()
+\begin{DoxyCompactList}\small\item\em Deleting the first element of the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_adabde890d749f012b0c4dd1531f2fe80}{clear}} ()
+\begin{DoxyCompactList}\small\item\em Clearing the vector. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_ae8f11b422a8359ca3a25039cd4bb856d}{resize}} (const std\+::size\+\_\+t new\+Size)
+\begin{DoxyCompactList}\small\item\em Changes the logical size, the physical size does not change. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_acd271ec2c45d793c510ab01b296a810d}{reserve}} (const std\+::size\+\_\+t new\+Capacity)
+\begin{DoxyCompactList}\small\item\em Reserving the memory for the vector. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_my_vector_a7c1edd47d0780a3c49130ef4ed10ff91}{empty}} ()
+\begin{DoxyCompactList}\small\item\em returns true or false depending on whether the vector contains elements or is empty \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_aaf438b4492f1dd47a47d077d073897cb}{insert}} (const T \&new\+Element, const std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em add a new element at the specified index \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_ab90bd3bc6f0daee830adc7892f6ad546}{erase}} (const std\+::size\+\_\+t index)
+\begin{DoxyCompactList}\small\item\em Deleting the element at the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a3589d8781441aa37faac9d93a772dda1}{erase}} (const std\+::size\+\_\+t start\+Index, const std\+::size\+\_\+t last\+Index)
+\begin{DoxyCompactList}\small\item\em Deleting the elements from the start\+Index to the last\+Index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_ac9a5abb80e053dba9c900eab2463e252}{erase\+\_\+if}} (std\+::function$<$ bool(T)$>$ func)
+\begin{DoxyCompactList}\small\item\em Deleting all the elements that satisfy the condition. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a1a9ceb53cb836b3b3d8e1b06b102164d}{shrink\+\_\+to\+\_\+fit}} ()
+\begin{DoxyCompactList}\small\item\em Deleting all the elements that are not used. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a8fac2dd59ec90a754463d7515a0ae933}{shift\+To\+Right}} (const std\+::size\+\_\+t index\+From=0)
+\begin{DoxyCompactList}\small\item\em It shifts all the elements to the right from the given index. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_my_vector_a6c8d770064c0be955b8d01c8de6089a6}{shift\+To\+Left}} (const std\+::size\+\_\+t index\+From=0)
+\begin{DoxyCompactList}\small\item\em It shifts all the elements to the left from the given index. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_my_vector_a621daad478907dd4512292baadd1ccd5}{operator\mbox{[}$\,$\mbox{]}}} (const std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Returning a reference to the element at the given index. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_my_vector_a1f388697df982266af3c059a32b19e23}{at}} (const std\+::size\+\_\+t index) const
+\begin{DoxyCompactList}\small\item\em Deleting the element at the given index. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_my_vector_afa2a87cfac1fb808408804c090b17376}{front}} ()
+\begin{DoxyCompactList}\small\item\em It returns the first element of the vector. \end{DoxyCompactList}\item 
+T \& \mbox{\hyperlink{class_my_vector_a7bb0bf3154979254ea86285181675e7a}{back}} ()
+\begin{DoxyCompactList}\small\item\em It returns the last element of the vector. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector_ad8b61602c2212dd30ff0eea22e0d953a}{capacity}} ()
+\begin{DoxyCompactList}\small\item\em It returns the capacity of the vector. \end{DoxyCompactList}\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector_a20d95db0a1779fb6b252af36fb484877}{size}} ()
+\begin{DoxyCompactList}\small\item\em It returns the size of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_my_vector_a25db82c92a96086cce5c70951c124820}{check\+For\+Right\+Size}} ()
+\begin{DoxyCompactList}\small\item\em It checks if the size of the vector is equal to the capacity of the vector.\+If it is not, it increases the capacity of the vector. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector_a726428cda60650448e4160296d2e4a40}{size\+\_\+}} = \{\}
+\item 
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector_af5b2f747c7eca1addefd3928de5185a6}{capacity\+\_\+}} = \{\}
+\item 
+T $\ast$ \mbox{\hyperlink{class_my_vector_ae4e22db42fd35e3187f508087fa68d07}{vec}} = nullptr
+\end{DoxyCompactItemize}
+
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_my_vector_ac356762c5ced52c0d934476cef32e472}\label{class_my_vector_ac356762c5ced52c0d934476cef32e472}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!MyVector@{MyVector}}
+\index{MyVector@{MyVector}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MyVector()}{MyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\mbox{\hyperlink{class_my_vector}{\+::\+My\+Vector}}}
+
+\mbox{\Hypertarget{class_my_vector_af3f732fef53e278f6410e9866def3399}\label{class_my_vector_af3f732fef53e278f6410e9866def3399}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!MyVector@{MyVector}}
+\index{MyVector@{MyVector}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{MyVector()}{MyVector()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\mbox{\hyperlink{class_my_vector}{\+::\+My\+Vector}} (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_my_vector_abe59f181259ff63fa583f4bd87a9737e}\label{class_my_vector_abe59f181259ff63fa583f4bd87a9737e}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!````~MyVector@{$\sim$MyVector}}
+\index{````~MyVector@{$\sim$MyVector}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{$\sim$MyVector()}{~MyVector()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::$\sim$\mbox{\hyperlink{class_my_vector}{My\+Vector}}}
+
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_my_vector_a1f388697df982266af3c059a32b19e23}\label{class_my_vector_a1f388697df982266af3c059a32b19e23}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!at@{at}}
+\index{at@{at}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{at()}{at()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::at (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Deleting the element at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a7bb0bf3154979254ea86285181675e7a}\label{class_my_vector_a7bb0bf3154979254ea86285181675e7a}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!back@{back}}
+\index{back@{back}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{back()}{back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::back}
+
+
+
+It returns the last element of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+T\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_ad8b61602c2212dd30ff0eea22e0d953a}\label{class_my_vector_ad8b61602c2212dd30ff0eea22e0d953a}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!capacity@{capacity}}
+\index{capacity@{capacity}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity()}{capacity()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::capacity}
+
+
+
+It returns the capacity of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a25db82c92a96086cce5c70951c124820}\label{class_my_vector_a25db82c92a96086cce5c70951c124820}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!checkForRightSize@{checkForRightSize}}
+\index{checkForRightSize@{checkForRightSize}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{checkForRightSize()}{checkForRightSize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::check\+For\+Right\+Size\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+It checks if the size of the vector is equal to the capacity of the vector.\+If it is not, it increases the capacity of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_adabde890d749f012b0c4dd1531f2fe80}\label{class_my_vector_adabde890d749f012b0c4dd1531f2fe80}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!clear@{clear}}
+\index{clear@{clear}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{clear()}{clear()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::clear}
+
+
+
+Clearing the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a7c1edd47d0780a3c49130ef4ed10ff91}\label{class_my_vector_a7c1edd47d0780a3c49130ef4ed10ff91}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!empty@{empty}}
+\index{empty@{empty}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{empty()}{empty()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+bool \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::empty}
+
+
+
+returns true or false depending on whether the vector contains elements or is empty 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_ab90bd3bc6f0daee830adc7892f6ad546}\label{class_my_vector_ab90bd3bc6f0daee830adc7892f6ad546}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [1/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+Deleting the element at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a3589d8781441aa37faac9d93a772dda1}\label{class_my_vector_a3589d8781441aa37faac9d93a772dda1}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!erase@{erase}}
+\index{erase@{erase}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase()}{erase()}\hspace{0.1cm}{\footnotesize\ttfamily [2/2]}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::erase (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{start\+Index,  }\item[{const std\+::size\+\_\+t}]{last\+Index }\end{DoxyParamCaption})}
+
+
+
+Deleting the elements from the start\+Index to the last\+Index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t start\+Index, const std\+::size\+\_\+t last\+Index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_ac9a5abb80e053dba9c900eab2463e252}\label{class_my_vector_ac9a5abb80e053dba9c900eab2463e252}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!erase\_if@{erase\_if}}
+\index{erase\_if@{erase\_if}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{erase\_if()}{erase\_if()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::erase\+\_\+if (\begin{DoxyParamCaption}\item[{std\+::function$<$ bool(T)$>$}]{func }\end{DoxyParamCaption})}
+
+
+
+Deleting all the elements that satisfy the condition. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em std\+::function$<$bool(\+T)$>$} & func \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_afa2a87cfac1fb808408804c090b17376}\label{class_my_vector_afa2a87cfac1fb808408804c090b17376}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!front@{front}}
+\index{front@{front}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{front()}{front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::front}
+
+
+
+It returns the first element of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+
+\begin{DoxyExceptions}{Exceptions}
+{\em std\+::out\+\_\+of\+\_\+range} & \\
+\hline
+\end{DoxyExceptions}
+\begin{DoxyReturn}{Returns}
+T\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_aaf438b4492f1dd47a47d077d073897cb}\label{class_my_vector_aaf438b4492f1dd47a47d077d073897cb}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!insert@{insert}}
+\index{insert@{insert}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{insert()}{insert()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::insert (\begin{DoxyParamCaption}\item[{const T \&}]{new\+Element,  }\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption})}
+
+
+
+add a new element at the specified index 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & T\& new element, const std\+::size\+\_\+t index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a11164c4a08fb63ca9c685b7a3e0de854}\label{class_my_vector_a11164c4a08fb63ca9c685b7a3e0de854}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!operator=@{operator=}}
+\index{operator=@{operator=}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator=()}{operator=()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+\mbox{\hyperlink{class_my_vector}{My\+Vector}} \& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::operator= (\begin{DoxyParamCaption}\item[{const \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$ \&}]{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [default]}}
+
+\mbox{\Hypertarget{class_my_vector_a621daad478907dd4512292baadd1ccd5}\label{class_my_vector_a621daad478907dd4512292baadd1ccd5}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!operator\mbox{[}\mbox{]}@{operator[]}}
+\index{operator\mbox{[}\mbox{]}@{operator[]}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{operator[]()}{operator[]()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T \& \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::operator\mbox{[}$\,$\mbox{]} (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index }\end{DoxyParamCaption}) const}
+
+
+
+Returning a reference to the element at the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t index \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+T\& 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_aa896e95bb435535bdcc0b3e7bcb7f6fe}\label{class_my_vector_aa896e95bb435535bdcc0b3e7bcb7f6fe}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!pop\_back@{pop\_back}}
+\index{pop\_back@{pop\_back}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_back()}{pop\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::pop\+\_\+back}
+
+
+
+Deleting the last element of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a217dbb95f74b71e577de18b190a79927}\label{class_my_vector_a217dbb95f74b71e577de18b190a79927}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!pop\_front@{pop\_front}}
+\index{pop\_front@{pop\_front}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{pop\_front()}{pop\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::pop\+\_\+front}
+
+
+
+Deleting the first element of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a9c546616e63f466f3a45515ae14f9890}\label{class_my_vector_a9c546616e63f466f3a45515ae14f9890}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!push\_back@{push\_back}}
+\index{push\_back@{push\_back}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_back()}{push\_back()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::push\+\_\+back (\begin{DoxyParamCaption}\item[{T}]{data }\end{DoxyParamCaption})}
+
+
+
+Adding an element to the ending of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a5580c20f59ed81410109503e0ae35fa7}\label{class_my_vector_a5580c20f59ed81410109503e0ae35fa7}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!push\_front@{push\_front}}
+\index{push\_front@{push\_front}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{push\_front()}{push\_front()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::push\+\_\+front (\begin{DoxyParamCaption}\item[{T}]{data }\end{DoxyParamCaption})}
+
+
+
+Adding an element to the beginning of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em T} & data \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_acd271ec2c45d793c510ab01b296a810d}\label{class_my_vector_acd271ec2c45d793c510ab01b296a810d}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!reserve@{reserve}}
+\index{reserve@{reserve}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{reserve()}{reserve()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::reserve (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{new\+Capacity }\end{DoxyParamCaption})}
+
+
+
+Reserving the memory for the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t new size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_ae8f11b422a8359ca3a25039cd4bb856d}\label{class_my_vector_ae8f11b422a8359ca3a25039cd4bb856d}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!resize@{resize}}
+\index{resize@{resize}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{resize()}{resize()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::resize (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{new\+Size }\end{DoxyParamCaption})}
+
+
+
+Changes the logical size, the physical size does not change. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t new size \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a6c8d770064c0be955b8d01c8de6089a6}\label{class_my_vector_a6c8d770064c0be955b8d01c8de6089a6}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!shiftToLeft@{shiftToLeft}}
+\index{shiftToLeft@{shiftToLeft}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shiftToLeft()}{shiftToLeft()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::shift\+To\+Left (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index\+From = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+It shifts all the elements to the left from the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t index\+From = 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a8fac2dd59ec90a754463d7515a0ae933}\label{class_my_vector_a8fac2dd59ec90a754463d7515a0ae933}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!shiftToRight@{shiftToRight}}
+\index{shiftToRight@{shiftToRight}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shiftToRight()}{shiftToRight()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::shift\+To\+Right (\begin{DoxyParamCaption}\item[{const std\+::size\+\_\+t}]{index\+From = {\ttfamily 0} }\end{DoxyParamCaption})}
+
+
+
+It shifts all the elements to the right from the given index. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em const} & std\+::size\+\_\+t index\+From = 0 \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a1a9ceb53cb836b3b3d8e1b06b102164d}\label{class_my_vector_a1a9ceb53cb836b3b3d8e1b06b102164d}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!shrink\_to\_fit@{shrink\_to\_fit}}
+\index{shrink\_to\_fit@{shrink\_to\_fit}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{shrink\_to\_fit()}{shrink\_to\_fit()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+void \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::shrink\+\_\+to\+\_\+fit}
+
+
+
+Deleting all the elements that are not used. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void nothing 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_my_vector_a20d95db0a1779fb6b252af36fb484877}\label{class_my_vector_a20d95db0a1779fb6b252af36fb484877}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!size@{size}}
+\index{size@{size}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size()}{size()}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::size}
+
+
+
+It returns the size of the vector. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em void} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+std\+::size\+\_\+t 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_my_vector_af5b2f747c7eca1addefd3928de5185a6}\label{class_my_vector_af5b2f747c7eca1addefd3928de5185a6}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!capacity\_@{capacity\_}}
+\index{capacity\_@{capacity\_}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{capacity\_}{capacity\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::capacity\+\_\+ = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_my_vector_a726428cda60650448e4160296d2e4a40}\label{class_my_vector_a726428cda60650448e4160296d2e4a40}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!size\_@{size\_}}
+\index{size\_@{size\_}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{size\_}{size\_}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+std\+::size\+\_\+t \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::size\+\_\+ = \{\}\hspace{0.3cm}{\ttfamily [private]}}
+
+\mbox{\Hypertarget{class_my_vector_ae4e22db42fd35e3187f508087fa68d07}\label{class_my_vector_ae4e22db42fd35e3187f508087fa68d07}} 
+\index{MyVector$<$ T $>$@{MyVector$<$ T $>$}!vec@{vec}}
+\index{vec@{vec}!MyVector$<$ T $>$@{MyVector$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{vec}{vec}}
+{\footnotesize\ttfamily template$<$typename T $>$ \\
+T$\ast$ \mbox{\hyperlink{class_my_vector}{My\+Vector}}$<$ T $>$\+::vec = nullptr\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+Headers/\mbox{\hyperlink{_my_vector_8h}{My\+Vector.\+h}}\item 
+Headers/\mbox{\hyperlink{_my_vector_8inl}{My\+Vector.\+inl}}\end{DoxyCompactItemize}
